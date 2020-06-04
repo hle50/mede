@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medehealth/components/dashboard_item_list.dart';
 import 'package:medehealth/components/side_menu.dart';
 
 class Home extends StatefulWidget {
@@ -69,9 +70,9 @@ class _HomeState extends State<Home> {
             padding: EdgeInsets.symmetric(horizontal: 10.0),
             child: TabBarView(
               children: [
-                Icon(Icons.directions_car),
-                Icon(Icons.directions_transit),
-                Icon(Icons.directions_bike),
+                DashboardItemList(),
+                DashboardItemList(),
+                DashboardItemList(),     
               ],
             ),
           ),
