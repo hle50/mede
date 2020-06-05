@@ -103,9 +103,12 @@ class Introduction extends StatelessWidget {
                       Header(
                         title: "BENEFITS",
                       ),
-                      Text(
-                        "Facility",
-                        style: TextStyle(fontWeight: FontWeight.w500),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 20),
+                        child: Text(
+                          "Facility",
+                          style: TextStyle(fontWeight: FontWeight.w500),
+                        ),
                       ),
                       Text(
                           "Etiam nisi ante, consectetur eget placerat a, tempus a neque."),
@@ -148,14 +151,18 @@ class Introduction extends StatelessWidget {
                       CheckedItem(
                           title:
                               "Etiam elit elit, elementum sed varius at, adipiscing vitae est."),
-                      Text(
-                        "Staff",
-                        style: TextStyle(fontWeight: FontWeight.w500),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 20),
+                        child: Text(
+                          "Staff",
+                          style: TextStyle(fontWeight: FontWeight.w500),
+                        ),
                       ),
                       Text(
                           "Sed nec felis pellentesque, lacinia dui sed, ultricies sapien. Pellentesque orci lectus, consectetur vel posuere posuere, rutrum eu ipsum. Aliquam eget odio sed ligula iaculis."),
                       Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 40),
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 20, horizontal: 40),
                         child: Container(
                           color: Colors.transparent,
                           width: MediaQuery.of(context).size.width,
@@ -169,10 +176,9 @@ class Introduction extends StatelessWidget {
                             child: Text(
                               "Start Study",
                               style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 16.0,
-                                fontWeight: FontWeight.w300
-                              ),
+                                  color: Colors.white,
+                                  fontSize: 16.0,
+                                  fontWeight: FontWeight.w300),
                             ),
                           ),
                         ),
