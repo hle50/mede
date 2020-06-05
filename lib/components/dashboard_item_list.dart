@@ -82,101 +82,106 @@ class MCard extends StatelessWidget {
       child: Card(
           shadowColor: Colors.white,
           elevation: 5,
-          child: Padding(
-            padding: const EdgeInsets.all(15.0),
-            child: Column(
-              children: <Widget>[
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(10),
-                      child: Image.network(
-                        "https://www.bbcgoodfood.com/sites/default/files/recipe-collections/collection-image/2013/05/chorizo-mozarella-gnocchi-bake-cropped.jpg",
-                        width: 100,
-                      ),
-                    ),
-                    Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 20),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: <Widget>[
-                            Text(
-                              "Absconding / Missing Person",
-                              style: TextStyle(
-                                fontWeight: FontWeight.w500,
-                                fontSize: 18,
-                                color: Color.fromRGBO(29, 29, 29, 1),
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(top: 10),
-                              child: Badge(
-                                badgeColor: Colors.orangeAccent,
-                                shape: BadgeShape.square,
-                                borderRadius: 5,
-                                toAnimate: false,
-                                badgeContent: Text('LEGISLATED',
-                                    style: TextStyle(
-                                        color: Colors.white, fontSize: 10)),
-                              ),
-                            ),
-                          ],
+          child: InkWell(
+            onTap: () {
+              Navigator.pushNamed(context, "Introduction");
+            },
+            child: Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Column(
+                children: <Widget>[
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: Image.network(
+                          "https://www.bbcgoodfood.com/sites/default/files/recipe-collections/collection-image/2013/05/chorizo-mozarella-gnocchi-bake-cropped.jpg",
+                          width: 100,
                         ),
                       ),
-                    )
-                  ],
-                ),
-                Divider(
-                  thickness: 2.0,
-                  color: Color.fromRGBO(232, 234, 239, 1),
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 10),
-                  child: Container(
-                    child: Row(
-                      children: <Widget>[
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Container(
-                              margin: EdgeInsets.only(bottom: 10),
-                              width: 120,
-                              child: MTitle(
-                                text: "category",
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 20),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: <Widget>[
+                              Text(
+                                "Absconding / Missing Person",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 18,
+                                  color: Color.fromRGBO(29, 29, 29, 1),
+                                ),
                               ),
-                            ),
-                            Container(
+                              Padding(
+                                padding: const EdgeInsets.only(top: 10),
+                                child: Badge(
+                                  badgeColor: Colors.orangeAccent,
+                                  shape: BadgeShape.square,
+                                  borderRadius: 5,
+                                  toAnimate: false,
+                                  badgeContent: Text('LEGISLATED',
+                                      style: TextStyle(
+                                          color: Colors.white, fontSize: 10)),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                  Divider(
+                    thickness: 2.0,
+                    color: Color.fromRGBO(232, 234, 239, 1),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 10),
+                    child: Container(
+                      child: Row(
+                        children: <Widget>[
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Container(
+                                margin: EdgeInsets.only(bottom: 10),
                                 width: 120,
                                 child: MTitle(
-                                  text: "status",
-                                )),
-                          ],
-                        ),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Container(
-                                margin: EdgeInsets.only(bottom: 10),
-                                child: MSub(
-                                  text: "Mandantory training",
-                                )),
-                            Container(
-                                child: MSub(
-                              text:
-                                  "Complete: ${DateFormat("dd-MMM-yyyy").format(DateTime.now())}",
-                            )),
-                          ],
-                        )
-                      ],
+                                  text: "category",
+                                ),
+                              ),
+                              Container(
+                                  width: 120,
+                                  child: MTitle(
+                                    text: "status",
+                                  )),
+                            ],
+                          ),
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Container(
+                                  margin: EdgeInsets.only(bottom: 10),
+                                  child: MSub(
+                                    text: "Mandantory training",
+                                  )),
+                              Container(
+                                  child: MSub(
+                                text:
+                                    "Complete: ${DateFormat("dd-MMM-yyyy").format(DateTime.now())}",
+                              )),
+                            ],
+                          )
+                        ],
+                      ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           )),
     );

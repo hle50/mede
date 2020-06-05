@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:medehealth/screens/dashboard.dart';
 import './screens/login.dart';
 import './screens/home.dart';
+import './screens/introduction.dart';
 
 void main() {
   runApp(MyApp());
@@ -33,6 +34,8 @@ class MyApp extends StatelessWidget {
       routes: {
         DashBoard.routeName: (context) => DashBoard(),
         Home.routeName: (context) => Home(),
+        Introduction.routeName: (context) => Introduction(),
+
       },
     );
   }
