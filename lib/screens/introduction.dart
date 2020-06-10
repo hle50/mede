@@ -171,7 +171,9 @@ class Introduction extends StatelessWidget {
                             shape: new RoundedRectangleBorder(
                               borderRadius: new BorderRadius.circular(10.0),
                             ),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.of(context).pushNamed("Details");
+                            },
                             color: Color.fromRGBO(29, 115, 168, 1),
                             child: Text(
                               "Start Study",
