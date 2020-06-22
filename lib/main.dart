@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:medehealth/screens/dashboard.dart';
+import 'package:medehealth/screens/profile.dart';
 import './screens/login.dart';
 import './screens/home.dart';
 import './screens/introduction.dart';
 import './screens/details.dart';
-
+import './screens/result1.dart';
 
 void main() {
   runApp(MyApp());
@@ -31,7 +32,6 @@ class MyApp extends StatelessWidget {
         // the app on. For desktop platforms, the controls will be smaller and
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
-
       ),
       home: Login(),
       routes: {
@@ -39,8 +39,9 @@ class MyApp extends StatelessWidget {
         Home.routeName: (context) => Home(),
         Introduction.routeName: (context) => Introduction(),
         Details.routeName: (context) => Details(),
+        Profile.routeName: (context) => Profile(),
+        Result1.routeName: (context) => Result1(),
       },
     );
   }
 }
-
