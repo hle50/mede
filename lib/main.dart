@@ -6,6 +6,8 @@ import './screens/home.dart';
 import './screens/introduction.dart';
 import './screens/details.dart';
 import './screens/result1.dart';
+import './screens/result2.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -41,6 +43,8 @@ class MyApp extends StatelessWidget {
         Details.routeName: (context) => Details(),
         Profile.routeName: (context) => Profile(),
         Result1.routeName: (context) => Result1(),
+        Result2.routeName: (context) => Result2(),
+
       },
     );
   }

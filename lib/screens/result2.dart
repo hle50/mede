@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:intl/intl.dart';
 
-class Result1 extends StatelessWidget {
-  static final String routeName = 'Result1';
+class Result2 extends StatelessWidget {
+  static final String routeName = 'Result2';
 
   @override
   Widget build(BuildContext context) {
@@ -31,10 +31,10 @@ class Result1 extends StatelessWidget {
               padding: EdgeInsets.symmetric(vertical: 30),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                color: Color.fromRGBO(77, 158, 46, 0.9),
+                color: Color.fromRGBO(255, 59, 48, 1),
                 boxShadow: [
                   BoxShadow(
-                      color: Color.fromRGBO(77, 158, 46, 0.9), spreadRadius: 3),
+                      color: Color.fromRGBO(255, 59, 48, 1), spreadRadius: 3),
                 ],
               ),
               child: Center(
@@ -42,11 +42,11 @@ class Result1 extends StatelessWidget {
                   radius: 250,
                   lineWidth: 13.0,
                   animation: true,
-                  percent: 0.74,
+                  percent: 0.26,
                   progressColor: Colors.white,
                   backgroundColor: Colors.red,
                   center: new Text(
-                    "74.0%",
+                    "26.0%",
                     style: new TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 40.0,
@@ -55,7 +55,7 @@ class Result1 extends StatelessWidget {
                   footer: Column(
                     children: <Widget>[
                       Text(
-                        "Congratulations!",
+                        "Not Achieve!!",
                         style: new TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 30.0,
@@ -68,7 +68,7 @@ class Result1 extends StatelessWidget {
                         child: Padding(
                           padding: const EdgeInsets.all(20.0),
                           child: Text(
-                            'You have successfully completed this MedeGuide.',
+                            'A post-Assessment result of 100% is required for this MedeGuide.',
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontWeight: FontWeight.normal,
@@ -77,14 +77,30 @@ class Result1 extends StatelessWidget {
                             ),
                           ),
                         ),
-                      )
+                      ),
+                      Center(
+                        child: Padding(
+                          padding: const EdgeInsets.all(20.0),
+                          child: Text(
+                            'It is recommended that you complete you complete this MedeGuide again to achieve the required result.',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontWeight: FontWeight.normal,
+                              fontSize: 15.0,
+                              color: Color.fromRGBO(155, 164, 183, 1),
+                            ),
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                   circularStrokeCap: CircularStrokeCap.round,
                 ),
               ),
             ),
-            SizedBox(height: 20,),
+            SizedBox(
+              height: 20,
+            ),
             Container(
               margin: EdgeInsets.symmetric(horizontal: 20.0),
               padding: EdgeInsets.symmetric(vertical: 20.0),
@@ -97,79 +113,6 @@ class Result1 extends StatelessWidget {
               ),
               child: Column(
                 children: <Widget>[
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Expanded(
-                        flex: 1,
-                        child: Image.asset('assets/images/image7.png'),
-                      ),
-                      Expanded(
-                        flex: 3,
-                        child: Container(
-                          padding: EdgeInsets.only(right: 20.0),
-                          child: Column(
-                            children: <Widget>[
-                              Text(
-                                'You have been awarded a certificate of completion for this MedeGuide',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 15),
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Text(
-                                ' This result adds 1 RCNA CNE point towards your professional development requirements',
-                                style: TextStyle(
-                                    fontSize: 15,
-                                    color: Color.fromRGBO(155, 164, 183, 1)),
-                              )
-                            ],
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
-                  SizedBox(
-                    height: 20.0,
-                  ),
-                  SizedBox(
-                    width: double.infinity,
-                    child: Container(
-                      margin: EdgeInsets.symmetric(horizontal: 40.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.white,
-                        border: Border.all(
-                          style: BorderStyle.solid,
-                          width: 1,
-                          color: Color.fromRGBO(77, 158, 46, 0.9),
-                        ),
-                        boxShadow: [
-                          BoxShadow(color: Colors.white, spreadRadius: 3),
-                        ],
-                      ),
-                      child: FlatButton.icon(
-                        onPressed: () {},
-                        icon: Icon(
-                          Icons.file_download,
-                          color: Color.fromRGBO(77, 158, 46, 0.9),
-                        ),
-                        label: Text(
-                          'DOWNLOAD',
-                          style: TextStyle(
-                            color: Color.fromRGBO(77, 158, 46, 0.9),
-                          ),
-                        ),
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 20.0,
-                  ),
-                  Divider(color: Color.fromRGBO(232, 234, 239, 1)),
                   Container(
                     margin: EdgeInsets.only(top: 10.0),
                     padding: EdgeInsets.symmetric(horizontal: 20.0),
@@ -233,7 +176,27 @@ class Result1 extends StatelessWidget {
                       onPressed: () {},
                       child: Padding(
                         padding: const EdgeInsets.all(20.0),
-                        child: Text('REVIEW MEDEGUIDE',
+                        child: Text('RETAKE ASSESSMENT',
+                            style: TextStyle(color: Colors.white)),
+                      ),
+                      textColor: Colors.white,
+                      color: Color.fromRGBO(77, 158, 46, 1),
+                      shape: RoundedRectangleBorder(
+                          side: BorderSide(
+                              color: Color.fromRGBO(77, 158, 46, 1),
+                              width: 1,
+                              style: BorderStyle.solid),
+                          borderRadius: BorderRadius.circular(10)),
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.symmetric(horizontal: 40),
+                    width: double.infinity,
+                    child: FlatButton(
+                      onPressed: () {},
+                      child: Padding(
+                        padding: const EdgeInsets.all(20.0),
+                        child: Text('RESTART MEDEGUIDE NOW',
                             style: TextStyle(color: Colors.white)),
                       ),
                       textColor: Colors.white,

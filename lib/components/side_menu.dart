@@ -36,16 +36,15 @@ class SideMenu extends StatelessWidget {
           ),
         ),
         ListTile(
-          title: Text('Item 1'),
+          title: Text('Result 1'),
           onTap: () {
             Navigator.of(context).pushNamed('Result1');
           },
         ),
         ListTile(
-          title: Text('Item 2'),
+          title: Text('Result 2'),
           onTap: () {
-            // Update the state of the app.
-            // ...
+            Navigator.of(context).pushNamed('Result2');
           },
         ),
       ],

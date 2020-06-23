@@ -12,14 +12,23 @@ class Profile extends StatelessWidget {
     return Scaffold(
       backgroundColor: Color.fromRGBO(232, 234, 239, 1),
       appBar: AppBar(
-        title: Text('Profile'),
+        iconTheme: IconThemeData(
+          color: Colors.black, //change your color here
+        ),
+        backgroundColor: Colors.white,
+        title: Text(
+          "Profile",
+          style: TextStyle(
+            color: Colors.black,
+          ),
+        ),
       ),
       body: SingleChildScrollView(
         child: Stack(
           alignment: Alignment.topCenter,
           children: <Widget>[
             Padding(
-              padding: EdgeInsets.only(top: circleRadius / 2.0),
+              padding: EdgeInsets.only(top: circleRadius / 2.0 + 40),
               child: Container(
                 margin: EdgeInsets.symmetric(horizontal: 20.0),
                 decoration: BoxDecoration(
@@ -203,6 +212,7 @@ class Profile extends StatelessWidget {
               ),
             ),
             Container(
+              margin: EdgeInsets.only(top: 40),
               width: circleRadius,
               height: circleRadius,
               decoration:
