@@ -39,9 +39,9 @@ class Profile extends StatelessWidget {
                   ],
                 ),
                 //replace this Container with your Card
-                height: size.height - 100,
+//                height: size.height - 100,
                 child: Container(
-                  padding: EdgeInsets.only(top: circleRadius + 20.0, left: 20.0, right: 20.0),
+                  padding: EdgeInsets.only(top: circleRadius/2 + 20.0, left: 20.0, right: 20.0),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
