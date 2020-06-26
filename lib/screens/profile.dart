@@ -31,6 +31,7 @@ class Profile extends StatelessWidget {
               padding: EdgeInsets.only(top: circleRadius / 2.0 + 40),
               child: Container(
                 margin: EdgeInsets.symmetric(horizontal: 20.0),
+                padding: EdgeInsets.only(bottom: 15.0),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   color: Colors.white,
@@ -41,7 +42,8 @@ class Profile extends StatelessWidget {
                 //replace this Container with your Card
 //                height: size.height - 100,
                 child: Container(
-                  padding: EdgeInsets.only(top: circleRadius/2 + 20.0, left: 20.0, right: 20.0),
+                  padding: EdgeInsets.only(
+                      top: circleRadius / 2 + 20.0, left: 20.0, right: 20.0),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -52,34 +54,34 @@ class Profile extends StatelessWidget {
                             'EMAIL ADDRESS',
                             style: TextStyle(
                               fontWeight: FontWeight.w500,
-                              color:
-                              Color.fromRGBO(155, 164, 183, 1),
+                              color: Color.fromRGBO(155, 164, 183, 1),
                             ),
                           )),
                       TextFormField(
                         decoration: InputDecoration(
                             isDense: true,
-                            contentPadding: EdgeInsets.only(
-                                left: 8.0, right: 8.0),
+                            contentPadding:
+                                EdgeInsets.only(left: 8.0, right: 8.0),
                             filled: true,
-                            floatingLabelBehavior:
-                            FloatingLabelBehavior.never,
+                            floatingLabelBehavior: FloatingLabelBehavior.never,
                             fillColor: Colors.white,
                             suffixIcon: Icon(
                               Icons.edit,
                               size: 25,
-                              color:  Color.fromRGBO(232,234,239, 1),
+                              color: Color.fromRGBO(232, 234, 239, 1),
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderSide: new BorderSide(
-                                color:  Color.fromRGBO( 232,234,239, 1),),
+                                color: Color.fromRGBO(232, 234, 239, 1),
+                              ),
                             ),
                             enabledBorder: OutlineInputBorder(
                               borderSide: new BorderSide(
-                                color:  Color.fromRGBO( 232,234,239, 1),),
+                                color: Color.fromRGBO(232, 234, 239, 1),
+                              ),
                             ),
                             hintText: "name@domain.com"),
-                          initialValue: 'marquise_johnston@yahoo.com',
+                        initialValue: 'marquise_johnston@yahoo.com',
                         // validator: (value) {
                         //   if (value.isEmpty) {
                         //     return 'Please enter some text';
@@ -93,31 +95,31 @@ class Profile extends StatelessWidget {
                             'GIVEN NAME',
                             style: TextStyle(
                               fontWeight: FontWeight.w500,
-                              color:
-                              Color.fromRGBO(155, 164, 183, 1),
+                              color: Color.fromRGBO(155, 164, 183, 1),
                             ),
                           )),
                       TextFormField(
                         decoration: InputDecoration(
                             isDense: true,
-                            contentPadding: EdgeInsets.only(
-                                left: 8.0, right: 8.0),
+                            contentPadding:
+                                EdgeInsets.only(left: 8.0, right: 8.0),
                             filled: true,
-                            floatingLabelBehavior:
-                            FloatingLabelBehavior.never,
+                            floatingLabelBehavior: FloatingLabelBehavior.never,
                             fillColor: Colors.white,
                             suffixIcon: Icon(
                               Icons.edit,
                               size: 25,
-                              color:  Color.fromRGBO(232,234,239, 1),
+                              color: Color.fromRGBO(232, 234, 239, 1),
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderSide: new BorderSide(
-                                color:  Color.fromRGBO( 232,234,239, 1),),
+                                color: Color.fromRGBO(232, 234, 239, 1),
+                              ),
                             ),
                             enabledBorder: OutlineInputBorder(
                               borderSide: new BorderSide(
-                                color:  Color.fromRGBO( 232,234,239, 1),),
+                                color: Color.fromRGBO(232, 234, 239, 1),
+                              ),
                             ),
                             hintText: "name@domain.com"),
                         initialValue: 'Marquise',
@@ -134,31 +136,31 @@ class Profile extends StatelessWidget {
                             'SURNAME',
                             style: TextStyle(
                               fontWeight: FontWeight.w500,
-                              color:
-                              Color.fromRGBO(155, 164, 183, 1),
+                              color: Color.fromRGBO(155, 164, 183, 1),
                             ),
                           )),
                       TextFormField(
                         decoration: InputDecoration(
                             isDense: true,
-                            contentPadding: EdgeInsets.only(
-                                left: 8.0, right: 8.0),
+                            contentPadding:
+                                EdgeInsets.only(left: 8.0, right: 8.0),
                             filled: true,
-                            floatingLabelBehavior:
-                            FloatingLabelBehavior.never,
+                            floatingLabelBehavior: FloatingLabelBehavior.never,
                             fillColor: Colors.white,
                             suffixIcon: Icon(
                               Icons.edit,
                               size: 25,
-                              color:  Color.fromRGBO(232,234,239, 1),
+                              color: Color.fromRGBO(232, 234, 239, 1),
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderSide: new BorderSide(
-                                color:  Color.fromRGBO( 232,234,239, 1),),
+                                color: Color.fromRGBO(232, 234, 239, 1),
+                              ),
                             ),
                             enabledBorder: OutlineInputBorder(
                               borderSide: new BorderSide(
-                                color:  Color.fromRGBO( 232,234,239, 1),),
+                                color: Color.fromRGBO(232, 234, 239, 1),
+                              ),
                             ),
                             hintText: "name@domain.com"),
                         initialValue: 'Johnston',
@@ -175,8 +177,7 @@ class Profile extends StatelessWidget {
                             'FACILITY',
                             style: TextStyle(
                               fontWeight: FontWeight.w500,
-                              color:
-                              Color.fromRGBO(155, 164, 183, 1),
+                              color: Color.fromRGBO(155, 164, 183, 1),
                             ),
                           )),
                       TextFormField(
@@ -185,20 +186,22 @@ class Profile extends StatelessWidget {
                             contentPadding: EdgeInsets.only(
                                 left: 8.0, right: 8.0, top: 8.0, bottom: 8.0),
                             filled: true,
-                            floatingLabelBehavior:
-                            FloatingLabelBehavior.never,
+                            floatingLabelBehavior: FloatingLabelBehavior.never,
                             fillColor: Colors.white,
                             focusedBorder: OutlineInputBorder(
                               borderSide: new BorderSide(
-                                color:  Color.fromRGBO( 232,234,239, 1),),
+                                color: Color.fromRGBO(232, 234, 239, 1),
+                              ),
                             ),
                             enabledBorder: OutlineInputBorder(
                               borderSide: new BorderSide(
-                                color:  Color.fromRGBO( 232,234,239, 1),),
+                                color: Color.fromRGBO(232, 234, 239, 1),
+                              ),
                             ),
                             hintText: "name@domain.com"),
                         maxLines: 8,
-                        initialValue: 'Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi, quis iaculis nulla iaculis vitae. Donec sagittis faucibus lacus eget blandit. Mauris vitae ultricies metus, at condimentum nulla. Donec quis ornare lacus. Etiam gravida mollis tortor quis porttitor.',
+                        initialValue:
+                            'Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi, quis iaculis nulla iaculis vitae. Donec sagittis faucibus lacus eget blandit. Mauris vitae ultricies metus, at condimentum nulla. Donec quis ornare lacus. Etiam gravida mollis tortor quis porttitor.',
                         // validator: (value) {
                         //   if (value.isEmpty) {
                         //     return 'Please enter some text';
@@ -215,8 +218,9 @@ class Profile extends StatelessWidget {
               margin: EdgeInsets.only(top: 40),
               width: circleRadius,
               height: circleRadius,
-              decoration:
-                  ShapeDecoration(shape: CircleBorder(), color: Color.fromRGBO(55,164,183,0.2)),
+              decoration: ShapeDecoration(
+                  shape: CircleBorder(),
+                  color: Color.fromRGBO(55, 164, 183, 0.2)),
               child: Padding(
                 padding: EdgeInsets.all(circleBorderWidth),
                 child: DecoratedBox(

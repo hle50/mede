@@ -16,6 +16,7 @@ class _DetailsState extends State<Details> {
   int all = 3;
   int currentStep = 0;
   bool complete = false;
+  List<String> appText = ["Introduction", "Study", "Assessment", "Result"];
 
   next() {
     currentStep + 1 != 4
@@ -45,7 +46,7 @@ class _DetailsState extends State<Details> {
         ),
         backgroundColor: Colors.white,
         title: Text(
-          "Assessment",
+          appText[currentStep],
           style: TextStyle(
             color: Colors.black,
           ),
@@ -291,7 +292,6 @@ class _DetailsState extends State<Details> {
                     child: Column(
                       children: <Widget>[
                         Container(
-                          color: Color.fromRGBO(162, 210, 239, 1),
                           child: Column(
                             children: <Widget>[
                               Container(
@@ -302,7 +302,11 @@ class _DetailsState extends State<Details> {
                                     Container(
                                       child: Row(
                                         children: <Widget>[
-                                          Icon(Icons.info),
+                                          Icon(
+                                            Icons.info,
+                                            color: Color.fromRGBO(
+                                                162, 210, 239, 1),
+                                          ),
                                           Text('Instructions')
                                         ],
                                       ),
@@ -310,6 +314,7 @@ class _DetailsState extends State<Details> {
                                     Container(
                                       child: Icon(
                                         Icons.close,
+                                        color: Color.fromRGBO(162, 210, 239, 1),
                                       ),
                                     )
                                   ],
@@ -321,6 +326,30 @@ class _DetailsState extends State<Details> {
                               Text(
                                 'To complete the MedeGuide, answer the questions below by selecting the answer that you think is the most correct. Your results will be displayed on the next page.',
                               ),
+                              Row(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  Expanded(
+                                    flex: 1,
+                                    child: Text(
+                                      '01',
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  ),
+                                  Expanded(
+                                    flex: 3,
+                                    child: Text(
+                                        'What is the number of Expected Outcomes in Standard Two Health and Personal Care?'),
+                                  )
+                                ],
+                              ),
+                              SizedBox(height: 10,),
+                              SizedBox(
+                                height: 5,
+                                child: Container(
+                                  color: Color.fromRGBO(232, 234, 239, 1),
+                                ),
+                              )
                             ],
                           ),
                         )
